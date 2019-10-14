@@ -1,0 +1,6 @@
+[submodule "sw/punchboot"]
+	path = sw/punchboot
+	url = https://github.com/jonasblixt/punchboot.git
+[submodule "sw/optee_os"]
+	path = sw/optee_os
+	url = https://github.com/OP-TEE/optee_os.git
