@@ -3,4 +3,12 @@
 	url = https://github.com/jonasblixt/punchboot.git
 [submodule "sw/optee_os"]
 	path = sw/optee_os
-	url = https://github.com/OP-TEE/optee_os.git
+    url = https://github.com/jonasblixt/optee_os.git
+    branch = bebop
+[submodule "sw/linux"]
+	path = sw/linux
+    url = https://github.com/jonasblixt/linux-imx.git
+    branch = bebop
+[submodule "sw/kickstart"]
+	path = sw/kickstart
+	url = https://github.com/jonasblixt/kickstart.git
