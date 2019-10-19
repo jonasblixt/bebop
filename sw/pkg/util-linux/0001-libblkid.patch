@@ -1,0 +1,15 @@
+--- a/libblkid/src/devname.c	2017-09-27 11:05:13.700361507 +0200
++++ b/libblkid/src/devname.c	2019-04-10 15:56:30.460346881 +0200
+@@ -487,6 +487,12 @@
+ 		if (sscanf(line, " %d %d %llu %128[^\n ]",
+ 			   &ma, &mi, &sz, ptname) != 4)
+ 			continue;
++
++        if (strstr(ptname,"boot"))
++            continue;
++        if (strstr(ptname,"rpmb"))
++            continue;
++
+ 		devs[which] = makedev(ma, mi);
+ 
+ 		DBG(DEVNAME, ul_debug("read partition name %s", ptname));
