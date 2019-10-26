@@ -49,6 +49,8 @@ RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt xenial main restricted uni
     python \
     python-crypto \
     python3-pyelftools \
+    cryptsetup \
+    libcryptsetup-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf.tar.xz | tar xJv -C /opt

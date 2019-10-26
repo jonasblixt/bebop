@@ -20,8 +20,8 @@ type = RAMDISK
 load_addr = 0x84000000
 file = build/initrd.cpio
 
-;[component]
-;type = TEE
-;load_addr = 0x84500000
-;file = build/tee.bin
+[component]
+type = TEE
+load_addr = 0x9e000000
+file = build/tee.bin
 

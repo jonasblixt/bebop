@@ -1,0 +1,13 @@
+$(eval $(call artifact,$(SYSROOT)/lib/ld-*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libpthread*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libc-*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libm-*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libc.so*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libm.so*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libdl*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/librt*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libcrypt*,rootfs/lib/))
+
+$(eval $(call artifact,$(SYSROOT)/lib/libstdc++*.so*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/lib/libgcc*.so*,rootfs/lib/))
+$(eval $(call artifact,$(SYSROOT)/usr/bin/gdbserver,rootfs/bin/))

@@ -11,4 +11,5 @@ CRYPTSETUP_CONFIGURE_OPTS = CFLAGS=-I$(TOP_DIR)/build/sdk/include \
 							--with-tmpfilesdir=/tmp \
             				--enable-static-libs
 
+$(eval $(call artifact,$(TOP_DIR)/build/sdk/lib/libcryptsetup.so.*,rootfs/lib/))
 $(eval $(automake-package))

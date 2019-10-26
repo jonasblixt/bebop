@@ -6,4 +6,6 @@ UTIL-LINUX_DO_SDK_INSTALL = yes
 
 UTIL-LINUX_CONFIGURE_OPTS  = --disable-all-programs
 
+$(eval $(call artifact,$(TOP_DIR)/build/sdk/lib/libuuid.so*,rootfs/lib/))
+$(eval $(call artifact,$(TOP_DIR)/build/sdk/lib/libblkid.so*,rootfs/lib/))
 $(eval $(automake-package))

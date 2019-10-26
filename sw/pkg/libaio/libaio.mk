@@ -6,4 +6,5 @@ LIBAIO_DO_SDK_INSTALL = yes
 LIBAIO_SDK_INSTALL_OPTS = prefix=$(TOP_DIR)/build/sdk
 LIBAIO_ENV = CC=$(TOOLCHAIN)-gcc
 
+$(eval $(call artifact,$(TOP_DIR)/build/sdk/lib/libaio.so*,rootfs/lib/))
 $(eval $(generic-package))

@@ -31,6 +31,8 @@ LVM2_BUILD_CMD = cd $(LVM2_SOURCE_DIR) && make -C libdm/ libdevmapper.so
 LVM2_SDK_INSTALL_CMD = cd $(LVM2_SOURCE_DIR) \
 				&& make -C libdm/ install_dynamic \
 				&& make -C libdm/ install_static \
+				&& make -C libdm/ install_pkgconfig \
     			&& make -C libdm/ install_include
 
+$(eval $(call artifact,$(TOP_DIR)/build/sdk/lib/libdevmapper.so.*,rootfs/lib/))
 $(eval $(automake-package))

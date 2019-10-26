@@ -1,0 +1,10 @@
+[ksfs]
+key_index = 1
+; key_source = PKCS11
+; pkcs11_key_id = 02
+; pkcs11_provider = /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+key_source = /work/sw/punchboot/pki/secp384r1-key-pair.pem
+hash_kind = SHA384
+sign_kind = EC384
+output = build/image.ksfs
+file = build/root.squash
