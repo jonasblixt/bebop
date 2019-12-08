@@ -4,7 +4,7 @@ ARTIFACT_CMDS =
 define copy-file
 $(info INSTALL $(1) -> $(dir build/$(2)))
 $(Q)$(shell mkdir -p $(dir build/$(2)))
-$(Q)$(shell cp -a $(1) build/$(2))
+$(Q)cp -a $(1) build/$(2)
 endef
 
 define artifact

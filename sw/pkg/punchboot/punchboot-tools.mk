@@ -2,12 +2,13 @@ PKG = punchboot-tools
 PUNCHBOOT-TOOLS_DO_HOST_TOOLS_INSTALL = yes
 
 define PUNCHBOOT-TOOLS_BUILD_CMD
-$(MAKE) -C $(TOP_DIR)/punchboot/src/tools CROSS_COMPILE=$(HOST_TOOLCHAIN)
+$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/pbimage/src CROSS_COMPILE=$(HOST_TOOLCHAIN)
+$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/punchboot/src CROSS_COMPILE=$(HOST_TOOLCHAIN)
 endef
 
 define PUNCHBOOT-TOOLS_HOST_TOOLS_INSTALL_CMD
-$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/punchboot install PREFIX=$(TOP_DIR)/build/host-tools/
-$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/pbimage install PREFIX=$(TOP_DIR)/build/host-tools/bin/
+$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/punchboot/src install PREFIX=$(TOP_DIR)/build/host-tools/
+$(MAKE) -C $(TOP_DIR)/punchboot/src/tools/pbimage/src install PREFIX=$(TOP_DIR)/build/host-tools/bin/
 endef
 
 PBIMAGE=$(TOP_DIR)/build/host-tools/bin/pbimage

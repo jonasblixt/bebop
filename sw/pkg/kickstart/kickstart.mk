@@ -7,5 +7,5 @@ $(MAKE) -C kickstart/src/  \
  				BOARD=$(KS_BOARD)
 endef
 
-$(eval $(call artifact,kickstart/src/build/kickstart,rootfs/kickstart))
+$(eval $(call artifact,kickstart/src/build-$(KS_BOARD)/kickstart,rootfs/kickstart))
 $(eval $(generic-package))
